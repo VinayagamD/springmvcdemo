@@ -1,25 +1,19 @@
 <%--
   Created by IntelliJ IDEA.
   User: Dell
-  Date: 01-07-2018
-  Time: 14:35
+  Date: 11-07-2018
+  Time: 07:23
   To change this template use File | Settings | File Templates.
 --%>
+<%@page isELIgnored="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Spring Demo</title>
+    <title>Student Confirmation</title>
 </head>
 <body>
-    <h2>Spring MVC Demo - Home Page</h2>
 
-    <hr>
+The student is confirmed : ${student.firstName} ${student.lastName}
 
-
-    <a href="hello/showForm">Hello World Form</a>
-
-    <br><br>
-
-    <a href="student/showForm">Student Form</a>
 </body>
 </html>
