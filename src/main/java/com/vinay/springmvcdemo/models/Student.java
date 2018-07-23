@@ -7,10 +7,15 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Student implements Serializable {
-    private String firstName;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String firstName;
     private String lastName;
     private String country;
     private String favouriteLanguage;
+    private String[] operatingSystems;
 
     private HashMap<String,String> countryOptions;
 
@@ -62,6 +67,14 @@ public class Student implements Serializable {
         this.favouriteLanguage = favouriteLanguage;
     }
 
+    public String[] getOperatingSystems() {
+        return operatingSystems;
+    }
+
+    public void setOperatingSystems(String[] operatingSystems) {
+        this.operatingSystems = operatingSystems;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -71,14 +84,15 @@ public class Student implements Serializable {
                 Objects.equals(lastName, student.lastName) &&
                 Objects.equals(country,student.country) &&
                 Objects.equals(countryOptions,student.countryOptions)&&
-                Objects.equals(favouriteLanguage,student.favouriteLanguage)
+                Objects.equals(favouriteLanguage,student.favouriteLanguage)&&
+                Objects.equals(operatingSystems,student.operatingSystems)
                 ;
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(firstName, lastName, country,countryOptions, favouriteLanguage);
+        return Objects.hash(firstName, lastName, country,countryOptions, favouriteLanguage,operatingSystems);
     }
 
     @Override
@@ -89,6 +103,7 @@ public class Student implements Serializable {
                 ", country='" + country + '\'' +
                 ", countryOptions='" + countryOptions + '\'' +
                 ", favouriteLanguage='" + favouriteLanguage + '\'' +
+                ", operatingSystems='" + operatingSystems + '\'' +
                 '}';
     }
 }
