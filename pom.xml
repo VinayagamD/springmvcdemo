@@ -8,28 +8,7 @@
 	<groupId>com.vinay.springmvcdem</groupId>
 	<artifactId>springmvcdemo</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>5.0.7.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>5.0.7.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>2.0.1.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>4.0.1</version>
-		</dependency>
-	</dependencies>
+
 	<packaging>war</packaging>
 
 	<name>springmvcdemo Maven Webapp</name>
@@ -81,8 +60,9 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	<dependencyManagement>
+
 		<dependencies>
+
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
@@ -92,11 +72,6 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aop</artifactId>
 				<version>5.0.7.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.servlet.jsp.jstl</groupId>
-				<artifactId>jstl-api</artifactId>
-				<version>1.2</version>
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
@@ -205,9 +180,21 @@
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet.jsp.jstl</groupId>
+				<artifactId>jstl-api</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet.jsp.jstl</groupId>
 				<artifactId>jstl</artifactId>
 				<version>1.2</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+			</dependency>
+
 
 			<dependency>
 				<groupId>org.hibernate.validator</groupId>
@@ -215,5 +202,5 @@
 				<version>6.0.10.Final</version>
 			</dependency>
 		</dependencies>
-	</dependencyManagement>
+
 </project>
