@@ -1,5 +1,7 @@
 package com.vinay.springmvcdemo.models;
 
+import com.vinay.springmvcdemo.validations.CourseCode;
+
 import javax.validation.constraints.*;
 import java.io.Serializable;
 
@@ -21,6 +23,7 @@ public class Customer implements Serializable {
     @Pattern(regexp = "^[a-zA-Z0-9]{6}", message = " only 6 chars/digits")
     private String postalCode;
 
+    @CourseCode
     private String courseCode;
 
     public String getFirstName() {
@@ -54,5 +57,13 @@ public class Customer implements Serializable {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }
